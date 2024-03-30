@@ -1,0 +1,18 @@
+{
+    "name": "com.radioactivegoat.buildsystem.editor",
+    "rootNamespace": "RG.BuildSystem",
+    "references": [
+        "GUID:e8654f2cfbf3d214b96a4e82c24f8aef"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
