@@ -1,28 +1,23 @@
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UIElements;
 
 public class ConfiguratorWindow : EditorWindow
 {
-    [FormerlySerializedAs("m_VisualTreeAsset")] [SerializeField]
+    [SerializeField]
     private VisualTreeAsset _visualTreeAsset = default;
 
-    [MenuItem("Window/UI Toolkit/ConfiguratorWindow")]
+    [MenuItem("Window/UI Toolkit/Configurator Window")]
     public static void ShowExample()
     {
         ConfiguratorWindow wnd = GetWindow<ConfiguratorWindow>();
-        wnd.titleContent = new GUIContent("ConfiguratorWindow");
+        wnd.titleContent = new GUIContent("Configurator Window");
     }
 
     public void CreateGUI()
     {
         // Each editor window contains a root VisualElement object
         VisualElement root = rootVisualElement;
-
-        // VisualElements objects can contain other VisualElement following a tree hierarchy.
-        VisualElement label = new Label("Hello World! From C#");
-        root.Add(label);
 
         // Instantiate UXML
         VisualElement labelFromUXML = _visualTreeAsset.Instantiate();
